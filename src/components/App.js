@@ -1,13 +1,22 @@
 import React from "react";
+import Header from "./Header";
+import About from "./About";
+import Articlelist from "./Articlelist";
 import blogData from "../data/blog";
 
 console.log(blogData);
 
+
 function App() {
+  const heading = "Overreacted"
+  const imageSrc= 'https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg'
+  const aboutText= "Personal blog by Dan Abramov. I explain with words and code."
+ 
   return (
     <div className="App">
-      You're on your own from here! Follow the deliverables; test things out in
-      the browser as you write your code; and good luck!
+       <Header heading= {heading} />
+       <About image = {imageSrc}  text= {aboutText}/>
+       <Articlelist/>
     </div>
   );
 }
